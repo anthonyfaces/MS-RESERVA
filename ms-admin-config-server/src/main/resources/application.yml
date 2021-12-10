@@ -21,7 +21,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/GalaxyTraining/MS-03-2021.git
+          uri: https://github.com/anthonyfaces/MS-RESERVA.git
           search-paths:
           - ms-admin-config-data
           username: ${USER_NAME}
