@@ -1,0 +1,43 @@
+-----------------------------------------
+Negocio
+-----------------------------------------
+
+1.-  ms-gestion-vuelos					8081
+2.-  ms-gestion-pasajeros				8082
+3.-  ms-gestion-reservas				8083
+4.-  ms-gestion-promociones				8084
+5.-  ms-gestion-reservas-query			8085
+6.-  ms-gestion-reservas-command		8086
+7.-  ms-gestion-reservas-producer		8087
+8.-  ms-gestion-reservas-consumer		8088
+9.-  ms-gestion-reservas-saga			8090 (SAGA)
+10.- ms-consulta-disponibilidad			8091
+
+
+
+4.- ms-gestion-pedidos-query			8084
+5.- ms-gestion-pedidos-command			8085
+6.- ms-gestion-pedidos-producer			8086
+7.- ms-gestion-pedidos-consumer			8087
+8.- ms-gestion-pedidos-autorizacion		8088 (SAGA)
+9.- ms-gestion-pedidos-credito-estandar	8090
+10.-ms-gestion-pedidos-credito-especial	8091
+
+-----------------------------------------
+Administración:
+-----------------------------------------
+11.-ms-admin-registry-server			8889
+12.-ms-admin-config-server				8888
+13.-ms-admin-api-gateway				8887
+14
+
+
+-----------------------------------------
+Topics de Apache Kafka:
+-----------------------------------------
+topic-reserva							CQRS
+topic-reserva-saga						SAGA
+
+
+topic-orden-credito-estandar			SAGA
+topic-orden-credito-especial			SAGA

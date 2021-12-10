@@ -1,0 +1,40 @@
+
+server:
+  port: 8888
+  
+spring:
+  application:
+    name: ms-admin-config-server
+    
+#Configuracion Local
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server: 
+#        native:
+#          searchLocations: file:///D:/WorkspaceMS/ms-admin-config-data
+
+
+#Configuracion Cloud (git)
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/GalaxyTraining/MS-03-2021.git
+          search-paths:
+          - ms-admin-config-data
+          username: ${USER_NAME}
+          password: ${USER_PASSWORD}
+          clone-on-start: true
+          force-pull: true
+          timeout: 5
+          default-label: 02.-Config-Server
+          
+          
+          
+          
+          
+          
+          
+          

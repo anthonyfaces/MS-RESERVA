@@ -1,0 +1,47 @@
+#Server
+server:
+  port: 8887
+      
+# Registry Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+         
+# Matricula o Mapeo de Microservicios
+# La seccion routes, son rutas manuales
+spring:
+  cloud:
+    gateway:
+      discovery.locator:               
+          enabled: true           
+          lowerCaseServiceId: true
+      routes:
+      - id: id-ms-gestion-reservas
+        uri: lb://MS-GESTION-RESERVAS
+        predicates:
+        - Path=/ms-reservas/**
+        filters:
+        - RewritePath=/ms-reservas/(?<path>.*), /$\{path}
+        
+      - id: albums
+        uri: https://jsonplaceholder.typicode.com/albums
+        predicates:
+        - Path=/albums
+        
+        
+# Activacion de endpoints del actuactor
+management:
+     endpoints:
+       web:
+         exposure:
+           include: '*'
+     endpoint:
+       health:
+         show-details: always
+         
+         
+         
+         
+         
