@@ -29,7 +29,7 @@ spring:
           clone-on-start: true
           force-pull: true
           timeout: 5
-          default-label: 02.-Config-Server
+#          default-label: 02.-Config-Server
           
           
           
